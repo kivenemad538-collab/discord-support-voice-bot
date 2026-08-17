@@ -10,9 +10,9 @@ const {
 const play = require('play-dl');
 
 // ==================== الإعدادات والـ IDs ====================
-const GUILD_ID = 'PUT_SERVER_ID_HERE';
-const SUPPORT_VOICE_CHANNEL_ID = 'PUT_SUPPORT_VOICE_CHANNEL_ID_HERE';
-const VIDEO_URL = 'PUT_YOUTUBE_OR_AUDIO_LINK_HERE';
+const GUILD_ID = '1535754836061065318';
+const SUPPORT_VOICE_CHANNEL_ID = '1536099298721140756';
+const VIDEO_URL = 'https://cdn.discordapp.com/attachments/1536347609164161034/1537199367503478905/20260812-2041-08.2038923.mp4?ex=6a841ab8&is=6a82c938&hm=8c7207bf32ea6d351441ea61f60528525849a07c18d8d1b1a1f420c48a440fa9&';
 const LEAVE_AFTER_PLAYING = true;
 // التوكن لا تضعه هنا؛ ضعه في Railway باسم DISCORD_TOKEN.
 // ===========================================================
