@@ -7,12 +7,12 @@ const {
   VoiceConnectionStatus,
   entersState,
 } = require('@discordjs/voice');
-const play = require('play-dl');
+const path = require('path');
 
 // ==================== الإعدادات والـ IDs ====================
-const GUILD_ID = '1535754836061065318';
-const SUPPORT_VOICE_CHANNEL_ID = '1536099298721140756';
-const VIDEO_URL = 'https://cdn.discordapp.com/attachments/1536347609164161034/1538991092345868298/Y2Mate.is_-_Clip_Cairo_Up_-3enba_x_Double_Zuksh___.mp3?ex=6a84b0a5&is=6a835f25&hm=0fb49e5d0d9a158705bd8404ec168160c153ba5ee4716c50871887a02e0da668&';
+const GUILD_ID = 'PUT_SERVER_ID_HERE';
+const SUPPORT_VOICE_CHANNEL_ID = 'PUT_SUPPORT_VOICE_CHANNEL_ID_HERE';
+const SUPPORT_AUDIO_FILE = path.join(__dirname, 'support.mp3');
 const LEAVE_AFTER_PLAYING = true;
 // التوكن لا تضعه هنا؛ ضعه في Railway باسم DISCORD_TOKEN.
 // ===========================================================
@@ -51,14 +51,8 @@ async function playWelcome(channel) {
 
     await entersState(connection, VoiceConnectionStatus.Ready, 20_000);
 
-    const source = await play.stream(VIDEO_URL, {
-      discordPlayerCompatibility: true,
-    });
-
     player = createAudioPlayer();
-    const resource = createAudioResource(source.stream, {
-      inputType: source.type,
-    });
+    const resource = createAudioResource(SUPPORT_AUDIO_FILE);
 
     connection.subscribe(player);
     player.play(resource);
@@ -73,7 +67,7 @@ async function playWelcome(channel) {
       await disconnectBot();
     });
   } catch (error) {
-    console.error('تعذر دخول الروم أو تشغيل الرابط:', error.message);
+    console.error('تعذر دخول الروم أو تشغيل support.mp3:', error.message);
     await disconnectBot();
   }
 }
