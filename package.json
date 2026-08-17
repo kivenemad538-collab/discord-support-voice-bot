@@ -1,0 +1,21 @@
+{
+  "name": "discord-support-voice-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord bot that plays a welcome video/audio when a member joins the support voice channel.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.18.0",
+    "discord.js": "^14.19.3",
+    "ffmpeg-static": "^5.2.0",
+    "play-dl": "^1.9.7"
+  }
+}
