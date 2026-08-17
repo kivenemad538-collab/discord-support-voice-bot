@@ -10,8 +10,8 @@ const {
 const path = require('path');
 
 // ==================== الإعدادات والـ IDs ====================
-const GUILD_ID = 'PUT_SERVER_ID_HERE';
-const SUPPORT_VOICE_CHANNEL_ID = 'PUT_SUPPORT_VOICE_CHANNEL_ID_HERE';
+const GUILD_ID = '1535754836061065318';
+const SUPPORT_VOICE_CHANNEL_ID = '1536099298721140756';
 const SUPPORT_AUDIO_FILE = path.join(__dirname, 'support.mp3');
 const LEAVE_AFTER_PLAYING = true;
 // التوكن لا تضعه هنا؛ ضعه في Railway باسم DISCORD_TOKEN.
